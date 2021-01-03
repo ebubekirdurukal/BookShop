@@ -28,3 +28,8 @@ CREATE TABLE IF NOT EXISTS `catalog_registration` (
 `relative_price` DOUBLE PRECISION,
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+INSERT INTO category VALUES(1,'roman');
+INSERT INTO book_store VALUES(1,'D&R','Istanbul');
+INSERT INTO book VALUES(5,'Tutunamayanlar',1,20);
+INSERT INTO catalog_registration VALUES(1,1,1,5);
