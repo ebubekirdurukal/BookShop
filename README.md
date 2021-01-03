@@ -1,10 +1,17 @@
 # Bookshop Project
 
-![Docker](https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png)
+<img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" width="150" height="100" />
+<img src="https://spring.io/images/spring-logo-9146a4d3298760c2e7e49595184e1975.svg" width="150" height="100" />
+<img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" width="150" height="100" />
+
+
+
+
+Bookshop is a java based book registration application.
 
 ### Getting Started
 
-Plase pull two necessary containers from docker hub. One of them is for our app and the other is for mysql database.
+Please pull two necessary containers from docker hub. One of them is for the spring app and the other is for mysql database.
 Then create a network so that these two containers can communicate. After that, you can
 start containers. Required commands:
 
@@ -28,12 +35,12 @@ In order to understand and test contoller methods better, you can refer to the s
 
 Postman collection for testing purposes can be downloaded using the link below.
 
-* [Download Colection for testing the endpoints](https://www.getpostman.com/collections/922273bdfbc25e4f4ca3)
+* [Collection for testing the endpoints](https://www.getpostman.com/collections/922273bdfbc25e4f4ca3)
 
 ### About Database
 
-Mysql database is used in this project. Initialization script is under resources folder and it is executed automatically.
-You can start using the app directly.
+Mysql database is used in this project. Initialization script is under resources folder and it is executed automatically. One book, category and book store is added.
+You can start using all the endpoints directly.
 
 
 ### About Entities
@@ -43,6 +50,7 @@ Catalog registration is the entity used for representing the ManyToMany relation
 thought as book record in which you can find all the information about book and stores.
 
 ### About Book Prices
+When you add a book to a bookstore, one of the parameters is relative price. Also every book has a price. Relative price is added to the base price and it gives the total price
 
 
 
