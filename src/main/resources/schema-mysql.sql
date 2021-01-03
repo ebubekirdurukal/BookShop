@@ -29,7 +29,9 @@ CREATE TABLE IF NOT EXISTS `catalog_registration` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-INSERT INTO category VALUES(1,'roman');
-INSERT INTO book_store VALUES(1,'D&R','Istanbul');
-INSERT INTO book VALUES(5,'Tutunamayanlar',1,20);
-INSERT INTO catalog_registration VALUES(1,1,1,5);
+
+
+INSERT INTO category  SELECT 1,'roman' WHERE NOT EXISTS (SELECT * FROM category);
+INSERT INTO book_store  SELECT 1,'D&R','Istanbul' WHERE NOT EXISTS (SELECT * FROM book_store);
+INSERT INTO book  SELECT 1,'Tutunamayanlar',1,20 WHERE NOT EXISTS (SELECT * FROM book);
+INSERT INTO catalog_registration  SELECT 1,1,1,5 WHERE NOT EXISTS (SELECT * FROM catalog_registration);
